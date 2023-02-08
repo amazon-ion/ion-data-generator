@@ -1,5 +1,5 @@
 ## Ion Data Generator
-* This tool allows users to generate synthetic ion data by matching the structure and type distribution of a schema derived from real-world data.
+* This tool allows users to generate synthetic Ion data by matching the structure and type distribution of a schema derived from real-world data.
 
 ## Installation
 
