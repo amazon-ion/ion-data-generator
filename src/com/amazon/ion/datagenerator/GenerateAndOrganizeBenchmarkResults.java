@@ -100,6 +100,9 @@ public class GenerateAndOrganizeBenchmarkResults {
     private static String parseVersionFromPom(String filePath) throws Exception {
         DocumentBuilderFactory pomFileInstance = DocumentBuilderFactory.newInstance();
         pomFileInstance.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+        pomFileInstance.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+        pomFileInstance.setExpandEntityReferences(false);
+        pomFileInstance.setXIncludeAware(false);
         DocumentBuilder db = pomFileInstance.newDocumentBuilder();
         Document pomFile = db.parse(new File(filePath));
         pomFile.getDocumentElement().normalize();
